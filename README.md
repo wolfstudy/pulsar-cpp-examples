@@ -1,6 +1,9 @@
 # pulsar-cpp-examples
 
 
+- Broker version: 2.6.1
+- Pulsar Client lib version: 2.6.1
+
 ## How to use TestExclusiveMessage
 
 1. Run Pulsar standalone
