@@ -148,3 +148,22 @@ Received again: Message(prod=standalone-0-8, seq=27, publish_time=1597068973763,
 2020-08-10 22:16:15.841 INFO  [0x116a555c0] ClientConnection:1387 | [127.0.0.1:50580 -> 127.0.0.1:6650] Connection closed
 2020-08-10 22:16:15.841 INFO  [0x116a555c0] ClientConnection:238 | [127.0.0.1:50580 -> 127.0.0.1:6650] Destroyed connection
 ```
+
+## How to use TestExclusiveConsumer and TestExclusiveProducer
+
+- Broker version: 2.6.1
+- Pulsar cpp client version: 2.6.1
+
+### Build
+
+```bash
+$ g++ --std=c++11 TestExclusiveConsumer.cc -o testExclusiveConsumer -I$HOME/github.com/apache/pulsar/pulsar-client-cpp/include -lpulsar -L$HOME/github.com/apache/pulsar/pulsar-client-cpp/lib
+$ g++ --std=c++11 TestExclusiveProducer.cc -o testExclusiveProducer -I$HOME/github.com/apache/pulsar/pulsar-client-cpp/include -lpulsar -L$HOME/github.com/apache/pulsar/pulsar-client-cpp/lib
+```
+
+### Run
+
+```bash
+$ ./testExclusiveConsumer
+$ ./testExclusiveProducer
+```
